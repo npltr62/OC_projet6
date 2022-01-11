@@ -1,9 +1,13 @@
-vms:
+vms: 
   vm1:  
-    nom: 'wordpress'
-    ip: '192.168.0.25'
+    name: 'wordpress'
+    host: '192.168.1.25'
     port: 22
+    user: np
+    pwd: np
   vm2:
-    nom: 'ftp'
-    ip: '192.168.0.30'
+    name: 'ftp'
+    host: '192.168.1.30'
     port: 22
+    user: np
+    pwd: np
