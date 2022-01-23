@@ -25,3 +25,22 @@ def ssh(host, user, pwd, cmd):
         print(stdout.readlines())
     except paramiko.AuthenticationException as e:
         print('erreur de connection')
+
+def upload_file(remote_server, ssh_user, ssh_password, local_filepath, remote_path):
+    sftp = None
+    transport = None
+    port_number=22
+    try:
+        # Create transport instance and setup SFTP connection
+        transport = paramiko.Transport((remote_server, port_number))
+        transport.connect(None, ssh_user, ssh_password)
+        sftp = paramiko.SFTPClient.from_transport(transport)
+
+        # Upload file to remote destination
+        sftp.put(local_filepath, remote_path)
+    except Exception as e:
+        print(f'Failed to transfer files: {e}')
+        if sftp:
+            sftp.close()
+        if transport:
+            transport.close()

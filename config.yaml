@@ -4,8 +4,8 @@ vms:
     host: '192.168.1.25'
     user: np
     pwd: np
-  vm2:
-    name: 'ftp'
-    host: '192.168.1.30'
-    user: np
-    pwd: np
+  # vm2:
+  #   name: 'ftp'
+  #   host: '192.168.1.30'
+  #   user: np
+  #   pwd: np

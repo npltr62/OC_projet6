@@ -15,8 +15,8 @@ def main():
     logging.info('Début du script')
     print("""
         1.install LAMP server & wordpress
-        2.backup and send to ftp server
-        3.reset wordpress
+        2.backup and download ftp server
+        3.hardreset wordpress
         4.restore last backup
         """)
     choice= input("What would you like to do? ")
