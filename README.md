@@ -1,9 +1,9 @@
 # Projet 6 OC
 
 Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'un site wordpress depuis un serveur ftp, à savoir :
-    1. l'installation
-    2. sauvegarde
-    3. restauration
+1. l'installation
+2. sauvegarde
+3. restauration
 
 ## Pour commencer
 
