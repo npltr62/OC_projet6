@@ -1,32 +1,27 @@
-# Projet 6 OC
+# Projet 6 @Openclassroom @Administrateurinfrastructure&cloud
 
-Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'un site wordpress depuis un serveur ftp, à savoir :
+Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'un site wordpress distant depuis un serveur ftp, à savoir :
+
 1. l'installation
-2. sauvegarde
-3. restauration
-
-## Pour commencer
-
-Entrez ici les instructions pour bien débuter avec votre projet...
+2. la sauvegarde
+3. la restauration
 
 ### Pré-requis
+Au préalable, il s'agit d'avoir
 
-Ce qu'il est requis pour commencer avec votre projet...
+- un serveur FTP
+- un serveur WordPress basé indiferement sous Debian ou RedHat
 
-- Programme 1
-- Programme 2
-- etc...
 
 ### Installation
 
-Les étapes pour installer votre programme....
+Remplir le fichier de configuration config.yaml
 
-Dites ce qu'il faut faire...
-
-_exemple_: Executez la commande ``telnet mapscii.me`` pour commencer ensuite [...]
+_exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [...]
 
 
-Ensuite vous pouvez montrer ce que vous obtenez au final...
+![Drag Racing](menu.jpg)
+
 
 ## Démarrage
 
@@ -50,7 +45,7 @@ _(pour le lien mettez simplement l'URL de votre projets suivi de ``/tags``)_
 
 ## Auteur
 Listez le(s) auteur(s) du projet ici !
-* **Nicolas Pelletier** _alias_ [@npltr62](https://github.com/npltr62)
+* **Nicolas.P** _alias_ [@npltr62](https://github.com/npltr62)
 
 
 ## License
