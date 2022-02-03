@@ -7,20 +7,24 @@ Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'u
 3. la restauration
 
 ### Pré-requis
-Au préalable, il s'agit d'avoir
+***Utiliser sudo sans mot de passe***
+Au préalable, il s'agit d'avoir distinctement 2 serveurs
 
 - un serveur FTP
-- un serveur WordPress basé indiferement sous Debian ou RedHat
-
+- un serveur web avec WordPress basé indiferement sous Debian ou RedHat 
 
 ### Installation
 
 Remplir le fichier de configuration config.yaml
+l'installation se déroule en ***local***
 
 _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [...]
 
 
-![Drag Racing](menu.jpg)
+``      1.install LAMP server & wordpress
+        2.backup and download ftp server
+        3.hardreset wordpress
+        4.restore last backup``
 
 
 ## Démarrage
