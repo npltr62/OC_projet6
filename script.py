@@ -14,7 +14,7 @@ def main():
     logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat)
     logging.info('Début du script')
     print("""
-        1.install LAMP server & wordpress
+        1.init wordpress
         2.backup and download ftp server
         3.hardreset wordpress
         4.restore last backup
