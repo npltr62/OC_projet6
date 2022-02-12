@@ -12,5 +12,5 @@ cmd1='sudo mysqldump -u root wordpress> dump.sql'
 cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "put ~/dump.sql; quit"'
 logging.info('start dump')
 fnct.run(cmd1)
-logging.info('start')
+logging.info('start transfer to ftp server')
 fnct.run(cmd2)
