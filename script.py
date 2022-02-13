@@ -20,6 +20,7 @@ def main():
         2.backup and download ftp server
         3.hardreset wordpress
         4.restore last backup
+        5.run crontab
         """)
     choice= input("What would you like to do? ")
     if choice=="1":
