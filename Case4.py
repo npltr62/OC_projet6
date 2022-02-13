@@ -8,7 +8,7 @@ host= config['vm']['host']
 pwd= config['vm']['pwd']
 package= fnct.distrib()
 cmd1= f'sudo {package} install lftp -y'
-cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get ~/dump.sql; quit"'
+cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get /backups/dump.sql; quit"'
 cmd3='sudo mysql -u root < dump.sql'
 fnct.run(cmd1)
 logging.info('start download from ftp server')
