@@ -32,7 +32,6 @@ _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [..
 
 ## Fabriqué avec
 
-
 _exemples :_
 * [Python](https://www.python.org/) - Python
 * [distro](https://github.com/python-distro/distro) - Module Python de détermination de l'OS et sa distribution
