@@ -1,6 +1,8 @@
 import yaml #import librairie yaml pour le fichier conf
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
+import fnct
+fnct.run('mkdir logs')
 datestr = strftime('[%d_%m_%Y_%T]')
 datebis = strftime('%Y_%m_%d')
 logfileinfo = f'./logs/{datebis}.log'
