@@ -3,9 +3,9 @@ import logging
 import yaml #import librairie yaml pour le fichier conf
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
-user= config['vms']['vm2']['user']
-host= config['vms']['vm2']['host']
-pwd= config['vms']['vm2']['pwd']
+user= config['vm']['user']
+host= config['vm']['host']
+pwd= config['vm']['pwd']
 package= fnct.distrib()
 cmd1= f'sudo {package} install lftp -y'
 cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get ~/dump.sql; quit"'
