@@ -10,8 +10,8 @@ host= config['vm']['host']
 pwd= config['vm']['pwd']
 package= fnct.distrib()
 cmd1= f'sudo {package} install lftp -y'
-cmd2='sudo mysqldump -u root wordpress > dump.sql'
-cmd3=f'sudo lftp sftp://{user}:{pwd}@{host} -e "put dump.sql; quit"'
+cmd2='mkdir -p ~/backup; sudo mysqldump -u root wordpress > /home/backup/dump.sql'
+cmd3=f'lftp sftp://{user}:{pwd}@{host} -e "mkdir -f backup; put -O ~/backup /home/{user}/backup/dump.sql; quit"'
 logging.info('install ltfp package')
 fnct.run(cmd1)
 logging.info('run dump wordpress database')
