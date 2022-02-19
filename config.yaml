@@ -3,3 +3,5 @@ vm:
   host: '192.168.1.30'
   user: np
   pwd: np
+cron:
+  syntaxe: '00 00 * * *'
