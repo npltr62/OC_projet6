@@ -32,14 +32,14 @@ _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [..
 
 |   Choix   |  Comportement    |
 |---    |:-:    |
-|   1   |   Permet d'initialiser un site wordpress :
+|   1   |    Permet d'initialiser un site wordpress :
         1. Télécharger les packets nécessaires
         2. Installer une base de donnée mariadb
         3. Lier la base de donnée sql à Wordpress    |
 |   2   |    Execute un backup de la base de donnée nommée ***wordpress** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
-|   3  |   ROLLING ON THE FLOOR LAUGHING   |
-|   4  |   GRINNING FACE   |
-|   5  |   FACE WITH TEARS OF JOY  |
+|   3   |    ROLLING ON THE FLOOR LAUGHING    |
+|   4   |    GRINNING FACE    |
+|   5   |    FACE WITH TEARS OF JOY   |
 
 
 
