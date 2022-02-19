@@ -6,8 +6,9 @@ with open('config.yaml') as f:
 user= config['vm']['user']
 host= config['vm']['host']
 pwd= config['vm']['pwd']
+syntaxe= config['cron']['syntaxe']
 package= fnct.distrib()
-cmd1= f'sudo {package} install lftp -y'
+cmd1= f'(crontab -l; echo "{syntaxe} mysqldump -u root wordpress > dump.sql",) | sort - | uniq - | crontab -'
 cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get /backups/dump.sql; quit"'
 cmd3='sudo mysql -u root < dump.sql'
 fnct.run(cmd1)
