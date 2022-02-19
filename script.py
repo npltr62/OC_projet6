@@ -2,6 +2,12 @@ import yaml #import librairie yaml pour le fichier conf
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
 import fnct
+datestr = strftime('[%d_%m_%Y_%T]')
+datebis = strftime('%Y_%m_%d')
+logfileinfo = f'/logs/{datebis}.log'
+logformat = '%(asctime)s %(levelname)s %(message)s'
+logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat)
+logging.info('Début du script')
 def main():
     package= fnct.distrib()
     fnct.run('mkdir logs')
@@ -9,12 +15,6 @@ def main():
     cmd2= f'sudo {package} install python3-distro python3-yaml -y'
     fnct.run(cmd1)
     fnct.run(cmd2)
-    datestr = strftime('[%d_%m_%Y_%T]')
-    datebis = strftime('%Y_%m_%d')
-    logfileinfo = f'./logs/{datebis}.log'
-    logformat = '%(asctime)s %(levelname)s %(message)s'
-    logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat)
-    logging.info('Début du script')
     print("""
         1.init wordpress
         2.backup and download ftp server

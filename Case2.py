@@ -2,7 +2,7 @@ import fnct
 import logging
 import yaml #import librairie yaml pour le fichier conf
 from time import strftime
-datestr = strftime('[%d_%m_%Y_%T]')
+datestr = strftime('%d_%m_%Y_%T')
 with open('config.yaml') as f:
     config = yaml.load(f, Loader=yaml.FullLoader)
 user= config['vm']['user']
