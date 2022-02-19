@@ -23,20 +23,15 @@ ou avec ***wget***
 Remplir le fichier de configuration config.yaml
 le démarrage se déroule en ***local***
 _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [...]
+Voici les options possibles:
 
-        1. install wordpress
-        2. backup and upload to ftp server
-        3. hardreset wordpress
-        4. restore last backup
-        5. run cronjob
-
-|   Choix   |  Comportement    |
-|-----------|------------------|
-|   1   |    Permet d'initialiser un site wordpress :   <ol><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
-|   2   |    Execute un backup de la base de donnée nommée ***wordpress** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
-|   3   |    ROLLING ON THE FLOOR LAUGHING    |
-|   4   |    GRINNING FACE    |
-|   5   |    FACE WITH TEARS OF JOY   |
+|   Choix   |  Intitulé    |  Comportement    |
+|-----------|--------------|------------------|
+|   1   |  install wordpress    |    Permet d'initialiser un site wordpress :   <ol style={text-align: right;}><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
+|   2   |  install wordpress    |    Execute un backup de la base de donnée nommée ***wordpress** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
+|   3   |  install wordpress    |    ROLLING ON THE FLOOR LAUGHING    |
+|   4   |  install wordpress    |    GRINNING FACE    |
+|   5   |  install wordpress    |    FACE WITH TEARS OF JOY   |
 
 
 
