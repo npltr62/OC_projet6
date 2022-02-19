@@ -31,7 +31,7 @@ _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [..
         5. run cronjob
 
 |   Choix   |  Comportement    |
-|---    |:-:    |
+|-----------|------------------|
 |   1   |    Permet d'initialiser un site wordpress :   <ol><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
 |   2   |    Execute un backup de la base de donnée nommée ***wordpress** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
 |   3   |    ROLLING ON THE FLOOR LAUGHING    |
