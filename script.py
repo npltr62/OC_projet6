@@ -5,7 +5,7 @@ import fnct
 fnct.run('mkdir logs')
 datestr = strftime('[%d_%m_%Y_%T]')
 datebis = strftime('%Y_%m_%d')
-logfileinfo = f'/logs/{datebis}.log'
+logfileinfo = f'./logs/{datebis}.log'
 logformat = '%(asctime)s %(levelname)s %(message)s'
 logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat)
 logging.info('Début du script')
