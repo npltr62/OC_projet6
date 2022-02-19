@@ -31,7 +31,8 @@ _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [..
         4. restore last backup
         5. run cronjob
 ``
-| Choix | Comportement
+| Choix | Comportement |
+|---    |:-:    |:-: |
 | 1 | Permet d'initialiser un site wordpress :
         1. Télécharger les packets nécessaires
         2. Installer une base de donnée mariadb
