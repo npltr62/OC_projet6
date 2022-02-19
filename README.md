@@ -29,7 +29,7 @@ Choix possibles :
 |   Choix   |  Intitulé    |  Comportement    |
 |-----------|--------------|------------------|
 |   1   |  install wordpress    |    Permet d'initialiser un site wordpress :   <ol><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
-|   2   |  backup and upload to ftp server    |    Execute un backup de la base de donnée nommée ***wordpress** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
+|   2   |  backup and upload to ftp server    |    Execute un backup de la base de donnée nommée ***wordpress*** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
 |   3   |  hardreset wordpress    |    Supprime **totalement** le site wordpress et le reinitialise pour une éventuelle restauration (cf option 4)    |
 |   4   | restore last backup    |    Importe le dernier backup et le réinjecte dans la base de donnée     |
 |   5   |  run cronjob    |    Active un cron job avec les configurations attribués dans le fichier yaml   |

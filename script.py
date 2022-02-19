@@ -2,7 +2,10 @@ import yaml #import librairie yaml pour le fichier conf
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
 import fnct
+package= fnct.distrib()
 fnct.run('mkdir logs')
+cmd1= f'sudo {package} update && {package} full-upgrade -y'
+cmd2= f'sudo {package} install python3-distro python3-yaml -y'
 datestr = strftime('[%d_%m_%Y_%T]')
 datebis = strftime('%Y_%m_%d')
 logfileinfo = f'./logs/{datebis}.log'
