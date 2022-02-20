@@ -10,6 +10,6 @@ host= config['vm']['host']
 pwd= config['vm']['pwd']
 syntaxe= config['cron']['syntaxe']
 package= fnct.distrib()
-cmd1= f'(crontab -l; echo " {syntaxe} sudo mysqldump -u root wordpress > dump.sql && lftp sftp://{user}:{pwd}@{host} -e "mkdir -E -f backup; put -O ~/backup /home/{user}/backup/{datestr}_dump.sql; quit") | sort - | uniq - | crontab -'
+cmd1= f'mkdir /home/{user}/.cron; cp cron.sh /home/{user}/.cron && (crontab -l; echo "{syntaxe} chmod +x /home/{user}/.cron/cron.sh {user} {pwd} {host} {datestr}") | sort - | uniq - | crontab -'
 logging.info('start set cronjob')
 fnct.run(cmd1)
