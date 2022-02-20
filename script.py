@@ -17,7 +17,7 @@ def main():
     fnct.run(cmd2)
     print("""
         1.init wordpress
-        2.backup and download ftp server
+        2.backup and upload ftp server
         3.hardreset wordpress
         4.restore last backup
         5.run crontab
