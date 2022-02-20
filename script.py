@@ -2,7 +2,7 @@ import yaml #import librairie yaml pour le fichier conf
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
 import fnct
-fnct.run('mkdir logs')
+fnct.run('mkdir -p logs')
 datestr = strftime('[%d_%m_%Y_%T]')
 datebis = strftime('%Y_%m_%d')
 logfileinfo = f'./logs/{datebis}.log'
@@ -39,6 +39,10 @@ def main():
         logging.info('choix4')
         exec(open("Case4.py").read())       
         print("\n Launch restore") 
+    elif choice=="5":
+        logging.info('choix5')
+        exec(open("Case5.py").read())       
+        print("\n Launch cronjob")     
     else:
         print("\n Choose an option, try again!")
 
