@@ -11,7 +11,7 @@ pwd= config['vm']['pwd']
 package= fnct.distrib()
 cmd1= f'sudo {package} install lftp -y'
 cmd2=f'mkdir -p ~/backup; cp -R /var/www/html/wordpress /home/{user}/backup/; sudo mysqldump -u root wordpress > /home/{user}/backup/{datestr}_dump.sql'
-cmd3=f'sudo tar -c -f -z -v /home/{user}/{datestr}_backup.tar.gz ~/backup'
+cmd3=f'sudo tar -cvf /home/{user}/{datestr}_backup.tar.gz ~/backup'
 cmd4=f'lftp sftp://{user}:{pwd}@{host} -e "mkdir -f backup; put -O ~/backup /home/{user}/{datestr}_backup.tar.gz; quit"'
 logging.info('install ltfp package')
 print('install ltfp package')
