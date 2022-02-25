@@ -32,7 +32,7 @@ Choix possibles :
 |   2   |  backup and upload to ftp server    |    Execute un backup de la base de donnée nommée ***wordpress*** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
 |   3   |  hardreset wordpress    |    Supprime **totalement** le site wordpress et le reinitialise pour une éventuelle restauration (cf option 4)    |
 |   4   | restore last backup    |    Importe le dernier backup et le réinjecte dans la base de donnée     |
-|   5   |  run cronjob    |    Cette commande exporte un fichier ``cron.sh`` qui sera éxécuté à la fréquence indiquée dans le fichier yaml ; <br> cron.sh fait adopte le même comportement que le choix 2  |
+|   5   |  run cronjob    |    Cette commande exporte un fichier ``backup_upload.sh`` qui sera éxécuté à la fréquence indiquée dans le fichier yaml ; <br> backup_upload.sh adopte le même comportement que le choix 2  |
 
 
 

@@ -10,6 +10,6 @@ host= config['vm']['host']
 pwd= config['vm']['pwd']
 syntaxe= config['cron']['syntaxe']
 package= fnct.distrib()
-cmd1= f'mkdir /home/{user}/.cron; cp cron.sh /home/{user}/.cron && (crontab -l; echo "{syntaxe} chmod +x /home/{user}/.cron/cron.sh {user} {pwd} {host} {datestr}") | sort - | uniq - | crontab -'
+cmd1= f'sudo {package} install lftp -y; mkdir -p ~/.cron; cp backup_upload.sh ~/.cron && (crontab -l; echo "{syntaxe} chmod +x /home/{user}/.cron/backup_upload.sh {user} {pwd} {host} {datestr}") | sort - | uniq - | crontab -'
 logging.info('start set cronjob')
 fnct.run(cmd1)
