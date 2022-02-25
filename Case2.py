@@ -14,8 +14,14 @@ cmd2=f'mkdir -p ~/backup; cp -R /var/www/html/wordpress /home/{user}/backup/; su
 cmd3=f'sudo tar -c -f -z -v /home/{user}/{datestr}_backup.tar.gz ~/backup'
 cmd4=f'lftp sftp://{user}:{pwd}@{host} -e "mkdir -f backup; put -O ~/backup /home/{user}/{datestr}_backup.tar.gz; quit"'
 logging.info('install ltfp package')
+print('install ltfp package')
 fnct.run(cmd1)
 logging.info('run dump wordpress database')
+print('run dump wordpress database')
 fnct.run(cmd2)
+logging.info('tar dump files')
+print('tar dump files')
+fnct.run(cmd3)
 logging.info('start transfer to ftp server')
+print('start transfer to ftp server')
 fnct.run(cmd4)
