@@ -10,10 +10,14 @@ pwd= config['vm']['pwd']
 datestr = config['latest_dump_file']['date']
 package= fnct.distrib()
 cmd1= f'sudo {package} install lftp -y'
-cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get ~/backup/{datestr}_backup.tar.gz; quit" && sudo tar -xzf  {datestr}_backup.tar.gz -C /var/www/html'
-cmd3='sudo mysql -u root wordpress < /var/www/html/wordpress/{datestr}_dump.sql'
+cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get ~/backup/{datestr}_backup.tar.gz ; quit" && sudo tar -xzf {datestr}_backup.tar.gz -C /var/www/html'
+cmd3=f'sudo mysql -u root wordpress < /var/www/html/wordpress/{datestr}_dump.sql'
+cmd4='sudo chown -R www-data:www-data /var/www/html/wordpress'
+cmd5='sudo cp /wp_conf/wp-config.php /var/www/html/wordpress/'
 fnct.run(cmd1)
 logging.info('start download from ftp server')
 fnct.run(cmd2)
 logging.info('start restore dump')
 fnct.run(cmd3)
+fnct.run(cmd4)
+fnct.run(cmd5)
