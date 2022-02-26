@@ -9,6 +9,6 @@ def distrib(): #détermination de la distribution linux
         return 'apt'
 def run(cmd):
     try:
-        subprocess.run(cmd, shell=True, check=True, timeout=20, capture_output=True)
+        subprocess.run(cmd, shell=True, check=True, capture_output=True)
     except subprocess.CalledProcessError as e:
         logging.error(e)

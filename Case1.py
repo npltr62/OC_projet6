@@ -8,7 +8,7 @@ host= config['vm']['host']
 pwd= config['vm']['pwd']
 logging.info('start')
 package= fnct.distrib()
-cmd1= f'sudo {package} update && {package} full-upgrade -y'
+cmd1= f'sudo {package} update'
 cmd2= f'sudo {package} install apache2 mariadb-server mariadb-client php libapache2-mod-php php-cli php-mysql php-zip php-curl php-xml wget -y'
 cmd3='sudo mysql -u root < wp_conf/wp.sql'
 cmd4='sudo wget -c https://wordpress.org/latest.tar.gz && sudo tar -xzf  latest.tar.gz -C /var/www/html'
