@@ -1,4 +1,3 @@
-import yaml #import librairie yaml pour le fichier conf
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
 import fnct
