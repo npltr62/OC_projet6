@@ -10,7 +10,8 @@ Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'u
 ***Utiliser sudo sans mot de passe***
 Au préalable, il s'agit d'avoir distinctement 2 serveurs
 - un serveur FTP
-- un serveur web avec WordPress basé indiferement sous Debian ou RedHat 
+- un serveur web basé indiferement sous Debian ou RedHat
+***Le serveur web***
 
 ### Installation
 Télécharger archive du projet avec ***curl***
@@ -23,13 +24,13 @@ ou avec ***wget***
 Remplir le fichier de configuration config.yaml
 le démarrage se déroule en ***local***
 _exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [...]
-
+le script quel in
 Choix possibles :
 
-|   Choix   |  Intitulé    |  Comportement    |
+|   Choix   |  Intitulé    |  Description    |
 |-----------|--------------|------------------|
 |   1   |  install wordpress    |    Permet d'initialiser un site wordpress :   <ol><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
-|   2   |  backup and upload to ftp server    |    Execute un backup de la base de donnée nommée ***wordpress*** et l'envoi sur le serveur configuré au préalable dans le fichier yaml   |
+|   2   |  backup and upload to ftp server    |    Backup du site wordpress et upload vers le serveur ftp: <ol><li> Création (si non présent) d'un répertoire backup dans le répertoire personnel</li><li> Copie du dossier wordpress dans le répertoire backup</li><li> Dump de la base de donnée wordpress dans répertoire backup</li><li> Mise en archive tar.gz du répertoire backup</li><li> Upload de l'archive tar.gz vers le serveur ftp</li></ol>   |
 |   3   |  hardreset wordpress    |    Supprime **totalement** le site wordpress et le reinitialise pour une éventuelle restauration (cf option 4)    |
 |   4   | restore last backup    |    Importe le dernier backup et le réinjecte dans la base de donnée     |
 |   5   |  run cronjob    |    Cette commande exporte un fichier ``backup_upload.sh`` qui sera éxécuté à la fréquence indiquée dans le fichier yaml ; <br> backup_upload.sh adopte le même comportement que le choix 2  |

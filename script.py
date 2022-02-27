@@ -7,10 +7,10 @@ datebis = strftime('%Y_%m_%d')
 logfileinfo = f'./logs/{datebis}.log'
 logformat = '%(asctime)s %(levelname)s %(message)s'
 logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat)
-logging.info('Début du script')
+logging.info('start script')
 def main():
     package= fnct.distrib()
-    cmd1= f'sudo {package} update && {package} full-upgrade -y'
+    cmd1= f'sudo {package} update'
     cmd2= f'sudo {package} install python3-distro python3-yaml -y'
     fnct.run(cmd1)
     fnct.run(cmd2)
