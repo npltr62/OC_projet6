@@ -1,3 +1,11 @@
+"""Prints information about an FMI observation station to the screen.
+
+Usage:
+    ./stationinfo.py
+
+Author:
+    David Whipp - 26.9.2018
+"""
 import fnct
 import logging
 import yaml #import librairie yaml pour le fichier conf

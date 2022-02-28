@@ -1,3 +1,11 @@
+"""Prints information about an FMI observation station to the screen.
+
+Usage:
+    ./stationinfo.py
+
+Author:
+    David Whipp - 26.9.2018
+"""
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
 import fnct
