@@ -22,9 +22,9 @@ ou avec ***wget***
 
 ## Démarrage
 Remplir le fichier de configuration config.yaml
-le démarrage se déroule en ***local***
-_exemple_: Executez la commande ``python3 script.py`` pour commencer ensuite [...]
-le script quel in
+le démarrage se déroule en ***local*** et il est **IMPORTANT** de conserver l'intégrité du répertoire afin de garentir le bon déroulement du script.
+_exemple_: Executez la commande ``np@np:~/OC_projet6 python3 script.py``.
+
 Choix possibles :
 
 |   Choix   |  Intitulé    |  Description    |
