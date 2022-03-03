@@ -1,14 +1,13 @@
-"""Prints information about an FMI observation station to the screen.
-
+"""
 Description:
-    Python script which wrapping all function needed
-
+    1. Install all packages required for wordpress installation
+    2. Create wordpress database
+    3. Link database to wordpress 
 Author:
     @npltr62 - 01.03.2022
 """
 import fnct #call functions and variables
 import logging #call logging module
-logging.info('start')
 package= fnct.distrib() #detect witch installing package should be used
 cmd1= f'sudo {package} install apache2 mariadb-server mariadb-client php libapache2-mod-php php-cli php-mysql php-zip php-curl php-xml wget -y'
 cmd2='sudo mysql -u root < wp_conf/wp.sql'

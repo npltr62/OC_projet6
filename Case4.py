@@ -1,37 +1,31 @@
 """Prints information about an FMI observation station to the screen.
 
-Usage:
-    ./stationinfo.py
+Description:
+    1. Download archive choosed from remote server
+    2. Restore the wordpress database
+    3. Link database to wordpress 
 
 Author:
-    David Whipp - 26.9.2018
+    @npltr62 - 01.03.2022
 """
-import fnct
-import logging
-import yaml #import librairie yaml pour le fichier conf
-from time import strftime
-with open('config.yaml') as f:
-    config = yaml.load(f, Loader=yaml.FullLoader)
-user= config['vm']['user']
-host= config['vm']['host']
-pwd= config['vm']['pwd']
-datestr = config['latest_dump_file']['date']
-package= fnct.distrib()
+import fnct #call functions and variables
+import logging #call logging module
+package= fnct.distrib() #detect witch installing package should be used
 cmd1= f'sudo {package} install lftp -y'
-cmd2=f'lftp sftp://{user}:{pwd}@{host} -e "get ~/backup/{datestr}_backup.tar.gz ; quit" && sudo tar -xf {datestr}_backup.tar.gz -C /var/www/html --strip-components=3'
-cmd3=f'sudo mysql -u root wordpress < /var/www/html/{datestr}_dump.sql && sudo rm -f /var/www/html/{datestr}_dump.sql'
-cmd4='sudo chown -R www-data:www-data /var/www/html/wordpress'
+cmd2=f'lftp sftp://{fnct.user}:{fnct.pwd}@{fnct.host} -e "get ~/backup/{fnct.datestr}_backup.tar.gz ; quit" && sudo tar -xf {fnct.datestr}_backup.tar.gz -C /var/www/html --strip-components=3'
+cmd3=f'sudo mysql -u root wordpress < /var/www/html/{fnct.datestr}_dump.sql && sudo rm -f /var/www/html/{fnct.datestr}_dump.sql'
+cmd4='sudo chown -R root:root /var/www/html/wordpress'
 cmd5='sudo cp /wp_conf/wp-config.php /var/www/html/wordpress/'
-fnct.run(cmd1)
+fnct.run(cmd1) #install ltfp package
 logging.info('start download from ftp server')
 print('start download from ftp server')
-fnct.run(cmd2)
+fnct.run(cmd2) #download archive from ftp server and extract it in html directory
 logging.info('start restore dump')
 print(('start restore dump'))
-fnct.run(cmd3)
+fnct.run(cmd3) #run sql instructions in order to restore wordpress database
 logging.info('change right access')
 print('change right access')
-fnct.run(cmd4)
+fnct.run(cmd4) #change the owner of wordpress folder recursively
 logging.info('copy worpress php config')
 print('copy worpress php config')
-fnct.run(cmd5)
+fnct.run(cmd5) #copy php setting in wordpress folder

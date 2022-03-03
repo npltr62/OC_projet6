@@ -31,9 +31,9 @@ Choix possibles :
 |-----------|--------------|------------------|
 |   1   |  install wordpress    |    Permet d'initialiser un site wordpress :   <ol><li>Télécharger les packets nécessaires</li><li>Installer une base de donnée</li><li>Lier la base de donnée sql à Wordpress</li></ol>    |
 |   2   |  backup and upload to ftp server    |    Backup du site wordpress et upload vers le serveur ftp: <ol><li> Création (si non présent) d'un répertoire backup dans le répertoire personnel</li><li> Copie du dossier wordpress dans le répertoire backup</li><li> Dump de la base de donnée wordpress dans répertoire backup</li><li> Mise en archive tar.gz du répertoire backup</li><li> Upload de l'archive tar.gz vers le serveur ftp</li></ol>   |
-|   3   |  hardreset wordpress    |    Supprime **totalement** le site wordpress et le reinitialise pour une éventuelle restauration (cf option 4)    |
-|   4   | restore last backup    |    Importe le dernier backup et le réinjecte dans la base de donnée     |
-|   5   |  run cronjob    |    Cette commande exporte un fichier ``backup_upload.sh`` qui sera éxécuté à la fréquence indiquée dans le fichier yaml ; <br> backup_upload.sh adopte le même comportement que le choix 2  |
+|   3   |  hardreset wordpress    |    Supprime **totalement** le site wordpress: <ol><li> Suppression du répertoire wordpress </li><li> Drop de la base de donnée wordpress</li></ol>   |
+|   4   | restore last backup    |    Importe le backup (configuré dans le yaml) et le réinjecte dans la base de donnée: <ol><li> Download de l'archive tar.gz</li><li> Décompression de l'archive et copie du répertoire wordpress</li><li>Restore de la base de donnée wordpress</li></ol>    |
+|   5   |  run cronjob    |    Programme l'éxécution d'un shell ``backup_upload.sh`` à une heure/fréquence indiquée dans le fichier yaml ; <br> backup_upload.sh adopte le même comportement que le choix 2  |
 
 
 
@@ -42,6 +42,8 @@ Choix possibles :
 _exemples :_
 * [Python](https://www.python.org/) - Python
 * [distro](https://github.com/python-distro/distro) - Module Python de détermination de l'OS et sa distribution
+* [yaml](https://pyyaml.org/) - Module d'analyse et de génération de code YAML
+
 
 ## Auteur
 * **Nicolas.P** _alias_ [@npltr62](https://github.com/npltr62)

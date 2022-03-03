@@ -1,19 +1,18 @@
 """Prints information about an FMI observation station to the screen.
-
-Usage:
-    ./stationinfo.py
+Description:
+    1. Remove wordpress folder
+    2. Drop wordpress database
 
 Author:
-    David Whipp - 26.9.2018
+    @npltr62 - 01.03.2022
 """
-import fnct
-import yaml #import librairie yaml pour le fichier conf
-import logging #import librairie logging permettant de logger les étapes du script
-cmd1='sudo rm -rf /var/www/html/'
+import fnct #call functions and variables
+import logging #call logging module
+cmd1='sudo rm -rf /var/www/html/worpress/'
 cmd2='sudo mysql -u root < drop_wp.sql'
-logging.info('remove worpress folder')
+logging.info('remove wordpress folder')
 print('remove wordpress folder')
-fnct.run(cmd1)
+fnct.run(cmd1) #remove wordpress folder
 logging.info('drop wordpress database')
 print('drop wordpress database')
-fnct.run(cmd2)
+fnct.run(cmd2) #run sql instructions in order to drop wordpress database

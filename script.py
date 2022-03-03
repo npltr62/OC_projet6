@@ -4,7 +4,7 @@ Usage:
     ./stationinfo.py
 
 Author:
-    David Whipp - 26.9.2018
+    @npltr62 - 01.03.2022
 """
 import logging #import librairie logging permettant de logger les étapes du script
 from time import strftime
