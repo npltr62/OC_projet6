@@ -1,7 +1,6 @@
 """
 /***************************************************************************
-    Wordpress_actions
-    
+    Wordpress_actions 
     GitHub repo : https://github.com/npltr62/OC_projet6
                               -------------------
         Date                  : 01.03.2022
@@ -63,5 +62,4 @@ def main():
         exec(open("Case5.py").read())       
     else:
         print("\n Choose an option, try again!")
-    
-    main()
+main()
