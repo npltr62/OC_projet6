@@ -8,8 +8,8 @@ Author:
 """
 import fnct #call functions and variables
 import logging #call logging module
-cmd1='sudo rm -rf /var/www/html/worpress/'
-cmd2='sudo mysql -u root < drop_wp.sql'
+cmd1='sudo rm -rf /var/www/html/'
+cmd2='sudo mysql -u root < wp_conf/drop_wp.sql'
 logging.info('remove wordpress folder')
 print('remove wordpress folder')
 fnct.run(cmd1) #remove wordpress folder
