@@ -1,6 +1,6 @@
 """
 Description:
-    Schedule a backup to remote server
+    Schedule a backup job
 
 Author:
     @npltr62 - 01.03.2022
