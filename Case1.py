@@ -6,7 +6,7 @@ Description:
 Author:
     @npltr62 - 01.03.2022
 """
-import fnct #call functions and variables
+import fnct #call functions
 import logging #call logging module
 package= fnct.distrib() #detect witch installing package should be used
 cmd1= f'sudo {package} install apache2 mariadb-server mariadb-client php libapache2-mod-php php-cli php-mysql php-zip php-curl php-xml wget -y'

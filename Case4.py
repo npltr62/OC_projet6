@@ -8,12 +8,13 @@ Description:
 Author:
     @npltr62 - 01.03.2022
 """
-import fnct #call functions and variables
+import fnct #call functions
+import env #call variables
 import logging #call logging module
 package= fnct.distrib() #detect witch installing package should be used
 cmd1= f'sudo {package} install lftp -y'
-cmd2=f'lftp sftp://{fnct.user}:{fnct.pwd}@{fnct.host} -e "get ~/backup/{fnct.datestr}_backup.tar.gz ; quit" && sudo tar -xf {fnct.datestr}_backup.tar.gz -C /var/www/html --strip-components=3'
-cmd3=f'sudo mysql -u root wordpress < /var/www/html/{fnct.datestr}_dump.sql && sudo rm -f /var/www/html/{fnct.datestr}_dump.sql'
+cmd2=f'lftp sftp://{env.user}:{env.pwd}@{env.host} -e "get ~/backup/{env.datestr}_backup.tar.gz ; quit" && sudo tar -xf {env.datestr}_backup.tar.gz -C /var/www/html --strip-components=3'
+cmd3=f'sudo mysql -u root wordpress < /var/www/html/{env.datestr}_dump.sql && sudo rm -f /var/www/html/{env.datestr}_dump.sql'
 cmd4='sudo chown -R root:root /var/www/html/wordpress'
 cmd5='sudo cp /wp_conf/wp-config.php /var/www/html/wordpress/'
 fnct.run(cmd1) #install ltfp package
