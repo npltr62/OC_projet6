@@ -31,25 +31,25 @@ def main():
         """)
     choice= input("What would you like to do? ")
     if choice=="1":
-        logging.error('choix1')
-        exec(open("Case1.py").read())
+        logging.info('***init wordpress***')
         print("\n Launch install")
+        exec(open("Case1.py").read())
     elif choice=="2":
-        logging.info('choix2')
+        logging.info('***backup and upload ftp server***')
+        print("\n Launch backup")        
         exec(open("Case2.py").read())
-        print("\n Launch backup")
     elif choice=="3":
-        logging.info('choix3')
-        exec(open("Case3.py").read())        
+        logging.info('***hardreset wordpress***')
         print("\n Launch reset")
+        exec(open("Case3.py").read())                
     elif choice=="4":
-        logging.info('choix4')
-        exec(open("Case4.py").read())       
+        logging.info('***restore last backup***')
         print("\n Launch restore") 
+        exec(open("Case4.py").read())       
     elif choice=="5":
-        logging.info('choix5')
+        logging.info('***run crontab***')
+        print("\n Launch cronjob")            
         exec(open("Case5.py").read())       
-        print("\n Launch cronjob")     
     else:
         print("\n Choose an option, try again!")
 
