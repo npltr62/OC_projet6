@@ -10,9 +10,9 @@ import fnct #call functions and variables
 import logging #call logging module
 cmd1='sudo rm -rf /var/www/html/'
 cmd2='sudo mysql -u root < wp_conf/drop_wp.sql'
-logging.info('remove wordpress folder')
-print('remove wordpress folder')
-fnct.run(cmd1) #remove wordpress folder
+logging.info('remove html folder')
+print('remove html folder')
+fnct.run(cmd1) #remove html folder
 logging.info('drop wordpress database')
 print('drop wordpress database')
 fnct.run(cmd2) #run sql instructions in order to drop wordpress database
