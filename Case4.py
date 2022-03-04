@@ -27,6 +27,3 @@ fnct.run(cmd3) #run sql instructions in order to restore wordpress database
 logging.info('change right access')
 print('change right access')
 fnct.run(cmd4) #change the owner of wordpress folder recursively
-logging.info('copy worpress php config')
-print('copy worpress php config')
-fnct.run(cmd5) #copy php setting in wordpress folder
