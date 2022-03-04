@@ -63,6 +63,5 @@ def main():
         exec(open("Case5.py").read())       
     else:
         print("\n Choose an option, try again!")
-
-if __name__ == '__main__':
+    
     main()
