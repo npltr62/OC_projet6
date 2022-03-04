@@ -18,8 +18,8 @@ cmd3=f'sudo mysql -u root wordpress < /var/www/html/{env.datestr}_dump.sql && su
 cmd4='sudo chown -R root:root /var/www/html/wordpress'
 cmd5='sudo cp /wp_conf/wp-config.php /var/www/html/wordpress/'
 fnct.run(cmd1) #install ltfp package
-logging.info('start download from ftp server')
-print('start download from ftp server')
+logging.info(f'start download {env.datestr}_backup.tar.gz from ftp server')
+print(f'start download {env.datestr}_backup.tar.gz from ftp server')
 fnct.run(cmd2) #download archive from ftp server and extract it in html directory
 logging.info('start restore dump')
 print(('start restore dump'))
