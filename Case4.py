@@ -16,7 +16,6 @@ cmd1= f'sudo {package} install lftp -y'
 cmd2=f'lftp sftp://{env.user}:{env.pwd}@{env.host} -e "get ~/backup/{env.datestr}_backup.tar.gz ; quit" && sudo tar -xf {env.datestr}_backup.tar.gz -C /var/www/html --strip-components=3'
 cmd3=f'sudo mysql -u root wordpress < /var/www/html/{env.datestr}_dump.sql && sudo rm -f /var/www/html/{env.datestr}_dump.sql'
 cmd4='sudo chown -R root:root /var/www/html/wordpress'
-cmd5='sudo cp /wp_conf/wp-config.php /var/www/html/wordpress/'
 fnct.run(cmd1) #install ltfp package
 logging.info(f'start download {env.datestr}_backup.tar.gz from ftp server')
 print(f'start download {env.datestr}_backup.tar.gz from ftp server')
