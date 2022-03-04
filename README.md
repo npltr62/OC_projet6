@@ -5,6 +5,7 @@ Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'u
 1. l'installation
 2. la sauvegarde
 3. la restauration
+4. la programmation d'une sauvegarde
 
 ### Pré-requis
 ***Utiliser sudo sans mot de passe***
