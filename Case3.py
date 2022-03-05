@@ -1,6 +1,6 @@
 """Prints information about an FMI observation station to the screen.
 Description:
-    1. Remove wordpress folder
+    1. Remove all files in html folder
     2. Drop wordpress database
 
 Author:
