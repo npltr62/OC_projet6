@@ -12,7 +12,7 @@ package= fnct.distrib() #detect witch installing package should be used
 cmd1= f'sudo {package} install apache2 mariadb-server mariadb-client php libapache2-mod-php php-cli php-mysql php-zip php-curl php-xml wget -y'
 cmd2='sudo mysql -u root < wp_conf/wp.sql'
 cmd3='sudo wget -c https://wordpress.org/latest.tar.gz && sudo tar -xzf latest.tar.gz -C /var/www/html && sudo rm latest.tar.gz'
-cmd4='sudo chown -R www-data:www-data /var/www/html/wordpress'
+cmd4='sudo chown -R www-data:www-data /var/www/html/wordpress/'
 cmd5='sudo cp wp_conf/wp-config.php /var/www/html/wordpress/'
 print('install all packages ')
 fnct.run(cmd1) #install all packages required for wordpress installation
