@@ -10,7 +10,7 @@ Il s'agit d'un script permettant d'automatiser les taches de la vie courante d'u
 ### Pré-requis
 ***Utiliser sudo sans mot de passe***
 Au préalable, il s'agit d'avoir distinctement 2 serveurs
-- un serveur FTP
+- un serveur FTP connu dans known_host pour la connexion sftp
 - un serveur web basé indiferement sous Debian ou RedHat
 ***Le serveur web***
 
@@ -23,7 +23,7 @@ ou avec ***wget***
 
 ## Démarrage
 Remplir le fichier de configuration config.yaml
-le démarrage se déroule en ***local*** et il est **IMPORTANT** de conserver l'intégrité du répertoire afin de garentir le bon déroulement du script.
+le démarrage se déroule en ***local*** et il est **IMPORTANT** de conserver l'intégrité du répertoire afin de garantir le bon déroulement du script.
 _exemple_: Executez la commande ``np@np:~/OC_projet6 python3 script.py``.
 
 Choix possibles :
