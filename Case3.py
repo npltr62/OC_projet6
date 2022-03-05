@@ -8,11 +8,11 @@ Author:
 """
 import fnct #call functions and variables
 import logging #call logging module
-cmd1='sudo rm -rf /var/www/html/'
+cmd1='sudo rm -rf /var/www/html/*'
 cmd2='sudo mysql -u root < wp_conf/drop_wp.sql'
-logging.info('remove html folder')
-print('remove html folder')
-fnct.run(cmd1) #remove html folder
+logging.info('remove all files in html folder')
+print('remove all files in html folder')
+fnct.run(cmd1) #remove all files in html folder
 logging.info('drop wordpress database')
 print('drop wordpress database')
 fnct.run(cmd2) #run sql instructions in order to drop wordpress database
