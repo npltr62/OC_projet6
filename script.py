@@ -24,7 +24,7 @@ fnct.run('mkdir -p logs') #create logs folder
 date = strftime('%Y_%m_%d') #create logs folder
 logfileinfo = f'./logs/{date}.log' #logfile name
 logformat = '%(asctime)s %(levelname)s %(message)s' #logformat
-logging.basicConfig(filename=logfileinfo, filemode='w', level=logging.INFO, format=logformat) #log config
+logging.basicConfig(filename=logfileinfo, level=logging.INFO, format=logformat) #log config
 logging.info('start script')
 def main():
     package= fnct.distrib() #detect witch installing package should be used
