@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 #backup_upload.sh
 #auteur: NP
 #description: 
